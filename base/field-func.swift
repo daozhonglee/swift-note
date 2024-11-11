@@ -54,4 +54,4 @@ class People {
 var people = People(age: 10)  //初始化 people 并不会init work 类的构造信息
 print(people.work)  //调用work 属性才完成 work 示例的构造
 
-//==================计算属性
+//==================计算属性 ===

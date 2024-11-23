@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		35C71E882CF215B5003E25C7 /* emojiArt-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "emojiArt-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35C71E882CF215B5003E25C7 /* emojiArt-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "emojiArt-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		35C71E892CF215B5003E25C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35C71E882CF215B5003E25C7 /* emojiArt-.app */,
+				35C71E882CF215B5003E25C7 /* emojiArt-02.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35C71E872CF215B5003E25C7 /* emojiArt- */ = {
+		35C71E872CF215B5003E25C7 /* emojiArt-02 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35C71E962CF215B6003E25C7 /* Build configuration list for PBXNativeTarget "emojiArt-" */;
+			buildConfigurationList = 35C71E962CF215B6003E25C7 /* Build configuration list for PBXNativeTarget "emojiArt-02" */;
 			buildPhases = (
 				35C71E842CF215B5003E25C7 /* Sources */,
 				35C71E852CF215B5003E25C7 /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				35C71E8A2CF215B5003E25C7 /* emojiArt-02 */,
 			);
-			name = "emojiArt-";
+			name = "emojiArt-02";
 			packageProductDependencies = (
 			);
 			productName = "emojiArt-";
-			productReference = 35C71E882CF215B5003E25C7 /* emojiArt-.app */;
+			productReference = 35C71E882CF215B5003E25C7 /* emojiArt-02.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 35C71E832CF215B5003E25C7 /* Build configuration list for PBXProject "emojiArt-" */;
+			buildConfigurationList = 35C71E832CF215B5003E25C7 /* Build configuration list for PBXProject "emojiArt-02" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35C71E872CF215B5003E25C7 /* emojiArt- */,
+				35C71E872CF215B5003E25C7 /* emojiArt-02 */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35C71E832CF215B5003E25C7 /* Build configuration list for PBXProject "emojiArt-" */ = {
+		35C71E832CF215B5003E25C7 /* Build configuration list for PBXProject "emojiArt-02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35C71E942CF215B6003E25C7 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35C71E962CF215B6003E25C7 /* Build configuration list for PBXNativeTarget "emojiArt-" */ = {
+		35C71E962CF215B6003E25C7 /* Build configuration list for PBXNativeTarget "emojiArt-02" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35C71E972CF215B6003E25C7 /* Debug */,

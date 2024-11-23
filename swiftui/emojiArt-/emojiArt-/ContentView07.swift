@@ -18,6 +18,7 @@ struct ContentView7: View {
     var body: some View {
         //hstack 有 viewBuilder修饰, 里面不能使用 for 循环
         VStack {
+            // ScrollView 是 SwiftUI 中的一个容器视图，它允许内容在空间不足时进行滚动。当内容超出可见区域时，用户可以通过滑动来查看所有内容。
             ScrollView{
                 cards
             }

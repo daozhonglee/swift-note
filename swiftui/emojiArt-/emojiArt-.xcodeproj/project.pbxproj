@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		35C71E8A2CF215B5003E25C7 /* emojiArt- */ = {
+		35C71E8A2CF215B5003E25C7 /* emojiArt-02 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "emojiArt-";
+			path = "emojiArt-02";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		35C71E7F2CF215B5003E25C7 = {
 			isa = PBXGroup;
 			children = (
-				35C71E8A2CF215B5003E25C7 /* emojiArt- */,
+				35C71E8A2CF215B5003E25C7 /* emojiArt-02 */,
 				35C71E892CF215B5003E25C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				35C71E8A2CF215B5003E25C7 /* emojiArt- */,
+				35C71E8A2CF215B5003E25C7 /* emojiArt-02 */,
 			);
 			name = "emojiArt-";
 			packageProductDependencies = (

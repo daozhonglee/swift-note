@@ -1,5 +1,5 @@
 
-//swift 可选项
+//swift 可选项 Optional
 
 var optionalString: String? = "Hello"
 
@@ -31,3 +31,7 @@ while true {
 repeat {
     print("hello")
 } while false
+
+var hello:String? // var hello: Optional<String> = .None
+var hello2:String? = "hello" // var hello: Optional<String> = .some("hello")
+var hello3:String? = nil // var hello: Optional<String> = .None

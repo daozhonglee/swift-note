@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		35EA41B42CFF50FE003E5B30 /* Memorize02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		354BADAC2CF60E92002A8923 /* PersonalProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		35EA41B62CFF50FE003E5B30 /* Memorize02 */ = {
+		354BADAE2CF60E92002A8923 /* PersonalProfile */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Memorize02;
+			path = PersonalProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		35EA41B12CFF50FE003E5B30 /* Frameworks */ = {
+		354BADA92CF60E92002A8923 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35EA41AB2CFF50FE003E5B30 = {
+		354BADA32CF60E92002A8923 = {
 			isa = PBXGroup;
 			children = (
-				35EA41B62CFF50FE003E5B30 /* Memorize02 */,
-				35EA41B52CFF50FE003E5B30 /* Products */,
+				354BADAE2CF60E92002A8923 /* PersonalProfile */,
+				354BADAD2CF60E92002A8923 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		35EA41B52CFF50FE003E5B30 /* Products */ = {
+		354BADAD2CF60E92002A8923 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35EA41B42CFF50FE003E5B30 /* Memorize02.app */,
+				354BADAC2CF60E92002A8923 /* PersonalProfile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35EA41B32CFF50FE003E5B30 /* Memorize02 */ = {
+		354BADAB2CF60E92002A8923 /* PersonalProfile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35EA41C22CFF50FF003E5B30 /* Build configuration list for PBXNativeTarget "Memorize02" */;
+			buildConfigurationList = 354BADBA2CF60E94002A8923 /* Build configuration list for PBXNativeTarget "PersonalProfile" */;
 			buildPhases = (
-				35EA41B02CFF50FE003E5B30 /* Sources */,
-				35EA41B12CFF50FE003E5B30 /* Frameworks */,
-				35EA41B22CFF50FE003E5B30 /* Resources */,
+				354BADA82CF60E92002A8923 /* Sources */,
+				354BADA92CF60E92002A8923 /* Frameworks */,
+				354BADAA2CF60E92002A8923 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				35EA41B62CFF50FE003E5B30 /* Memorize02 */,
+				354BADAE2CF60E92002A8923 /* PersonalProfile */,
 			);
-			name = Memorize02;
+			name = PersonalProfile;
 			packageProductDependencies = (
 			);
-			productName = Memorize02;
-			productReference = 35EA41B42CFF50FE003E5B30 /* Memorize02.app */;
+			productName = PersonalProfile;
+			productReference = 354BADAC2CF60E92002A8923 /* PersonalProfile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		35EA41AC2CFF50FE003E5B30 /* Project object */ = {
+		354BADA42CF60E92002A8923 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					35EA41B32CFF50FE003E5B30 = {
+					354BADAB2CF60E92002A8923 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = 35EA41AF2CFF50FE003E5B30 /* Build configuration list for PBXProject "Memorize02" */;
+			buildConfigurationList = 354BADA72CF60E92002A8923 /* Build configuration list for PBXProject "PersonalProfile" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 35EA41AB2CFF50FE003E5B30;
+			mainGroup = 354BADA32CF60E92002A8923;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 35EA41B52CFF50FE003E5B30 /* Products */;
+			productRefGroup = 354BADAD2CF60E92002A8923 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35EA41B32CFF50FE003E5B30 /* Memorize02 */,
+				354BADAB2CF60E92002A8923 /* PersonalProfile */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		35EA41B22CFF50FE003E5B30 /* Resources */ = {
+		354BADAA2CF60E92002A8923 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		35EA41B02CFF50FE003E5B30 /* Sources */ = {
+		354BADA82CF60E92002A8923 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		35EA41C02CFF50FF003E5B30 /* Debug */ = {
+		354BADB82CF60E94002A8923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		35EA41C12CFF50FF003E5B30 /* Release */ = {
+		354BADB92CF60E94002A8923 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,14 +244,14 @@
 			};
 			name = Release;
 		};
-		35EA41C32CFF50FF003E5B30 /* Debug */ = {
+		354BADBB2CF60E94002A8923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Memorize02/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalProfile/Preview Content\"";
 				DEVELOPMENT_TEAM = 8H5W96W683;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -265,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.measure.Memorize02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.measure.PersonalProfile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,14 +273,14 @@
 			};
 			name = Debug;
 		};
-		35EA41C42CFF50FF003E5B30 /* Release */ = {
+		354BADBC2CF60E94002A8923 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Memorize02/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalProfile/Preview Content\"";
 				DEVELOPMENT_TEAM = 8H5W96W683;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -294,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.measure.Memorize02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.measure.PersonalProfile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		35EA41AF2CFF50FE003E5B30 /* Build configuration list for PBXProject "Memorize02" */ = {
+		354BADA72CF60E92002A8923 /* Build configuration list for PBXProject "PersonalProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				35EA41C02CFF50FF003E5B30 /* Debug */,
-				35EA41C12CFF50FF003E5B30 /* Release */,
+				354BADB82CF60E94002A8923 /* Debug */,
+				354BADB92CF60E94002A8923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35EA41C22CFF50FF003E5B30 /* Build configuration list for PBXNativeTarget "Memorize02" */ = {
+		354BADBA2CF60E94002A8923 /* Build configuration list for PBXNativeTarget "PersonalProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				35EA41C32CFF50FF003E5B30 /* Debug */,
-				35EA41C42CFF50FF003E5B30 /* Release */,
+				354BADBB2CF60E94002A8923 /* Debug */,
+				354BADBC2CF60E94002A8923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 35EA41AC2CFF50FE003E5B30 /* Project object */;
+	rootObject = 354BADA42CF60E92002A8923 /* Project object */;
 }

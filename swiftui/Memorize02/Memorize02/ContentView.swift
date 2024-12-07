@@ -4,7 +4,8 @@
 //
 //  Created by shanquan on 2024/11/27.
 //
-// 基于 02 的 button，继续抽象 cardRemover 计算属性，用于 card 的增减
+// 基于 02 的 button，继续抽象 cardRemover 等几个计算属性，使得代码更加清晰易读
+// 可以跟 02 对比当前版本的改动
 
 import SwiftUI
 
@@ -17,24 +18,10 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                // 在 SwiftUI 中，ForEach 是一个非常有用的结构，用于动态生成视图
-                // 它允许开发者通过循环创建多个视图，而无需手动为每个元素编写代码。
-                ForEach(0..<cardCount, id: \.self) { index in
-                    CardView(content: emojis[index])
-                }
-            }
-            .foregroundColor(.orange)
-            .padding()
-            HStack {
-                cardRemover
-                Spacer()
-                cardAdder
-
-            }
-            .imageScale(.large)
-            .font(.largeTitle)
+            cards
+            cardAdjuster
         }
+        .padding()
     }
     var cardRemover: some View {
         Button(
@@ -46,6 +33,7 @@ struct ContentView: View {
             label: {
                 Image(systemName: "rectangle.stack.badge.minus.fill")
             })
+        .font(.largeTitle)
     }
     var cardAdder: some View {
         Button(
@@ -57,6 +45,27 @@ struct ContentView: View {
             label: {
                 Image(systemName: "rectangle.stack.badge.plus.fill")
             })
+        .font(.largeTitle)
+    }
+
+    //隐式返回,下面的 return 可以省略
+    // 如果你有一个普通的函数并且它只有一行代码，那么你可以省略 return
+    var cards: some View{
+        return HStack {
+            ForEach(0..<cardCount, id: \.self) { index in
+                CardView(content: emojis[index])
+            }
+        }
+        .foregroundColor(.orange)
+    }
+
+    var cardAdjuster: some View {
+        HStack {
+            cardRemover
+            Spacer()
+            cardAdder
+        }
+        
     }
 }
 

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct EmojiMomoryGameView: View {
-    //声明一个 vm 指针指向 viewmodel
-    var viewModel: EmojiMemoryGame = EmojiMemoryGame()
+    //ObservedObject 意味着如果这个 var 有什么改变，重新绘制界面（只会重新绘制受影响的视图）
+    @ObservedObject var viewModel: EmojiMemoryGame
 
     @State var cardCount = 4
 
@@ -69,5 +69,5 @@ struct CardView: View {
 }
 
 #Preview {
-    EmojiMomoryGameView()
+    EmojiMomoryGameView(viewModel: EmojiMemoryGame())
 }

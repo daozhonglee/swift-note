@@ -5,7 +5,7 @@
 //  Created by shanquan on 2024/12/7.
 //
 // 在 VM 中增加 Model 的初始化方法，
-// 使用函数式编程的方式，初始化 Model，并用尾随闭包的形式提供了初始化 model 的方法
+// 使用函数式编程的方式，初始化 Model，并用尾随闭包的形式提供了初始化 model 的方法 
 //
 
 import SwiftUI

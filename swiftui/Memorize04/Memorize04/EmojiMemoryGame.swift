@@ -30,8 +30,12 @@ class EmojiMemoryGame {
         model.cards
     }
 
+    //模型是不可变的
+    func shuffle() {
+        model.shuffle()
+    }
+
     func choose(card: MemoryGame<String>.Card) {
         model.chooseCard(card)
-
     }
 }

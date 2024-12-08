@@ -19,6 +19,9 @@ struct EmojiMomoryGameView: View {
                 cards
             }
         }
+        Button("shuffle") {
+            viewModel.shuffle()
+        }
         .padding()
     }
 

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    //声明一个 vm 指针指向 viewmodel
+    var viewModel: EmojiMemoryGame
+
     let emojis = [
         "👻", "🧅", "👿", "🍊", "🍎", "🍍", "🍐", "🍓", "🍇", "🍉", "🍌",
     ]

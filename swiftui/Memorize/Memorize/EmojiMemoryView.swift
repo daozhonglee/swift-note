@@ -26,6 +26,7 @@ struct EmojiMemoryView: View {
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 0) {
             //foreach 可以创建视图
+
             ForEach(viewModel.cards.indices, id: \.self) { index in
                 CardView(viewModel.cards[index])
                     // aspectRatio 是 SwiftUI 中用于控制视图宽高比的重要修饰符

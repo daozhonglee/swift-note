@@ -4,10 +4,11 @@
 //
 //  Created by shanquan on 2024/12/9.
 //
+// 这里讲了如何利用 Path 来绘制一个形状，配合 Pie 一起看
 
 import SwiftUI
 
-struct CardView: View {
+struct CardView02: View {
     typealias Card = MemoryGame<String>.Card
     var card: Card
 
@@ -64,9 +65,8 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(
-        CardView
-            .Card(isFaceUp: false, isMatched: false, content: "x", id: "test")
+    CardView02(
+        CardView02.Card(isFaceUp: false, isMatched: false, content: "x", id: "test")
     )
     .padding()
     .foregroundColor(.orange)

@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		35EA428B2D07508F003E5B30 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA428A2D07508F003E5B30 /* Cardify.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		35EA426D2D0739CC003E5B30 /* Memorize07.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize07.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EA428A2D07508F003E5B30 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		35EA42642D0739CC003E5B30 = {
 			isa = PBXGroup;
 			children = (
+				35EA428A2D07508F003E5B30 /* Cardify.swift */,
 				35EA426F2D0739CC003E5B30 /* Memorize07 */,
 				35EA426E2D0739CC003E5B30 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EA428B2D07508F003E5B30 /* Cardify.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,33 +16,19 @@ struct CardView: View {
     }
 
     var body: some View {
-        ZStack {
-            let base = RoundedRectangle(cornerRadius: Constants.cornerRadius)
-            Group {
-                base.fill(.white)
-                base.strokeBorder(lineWidth: Constants.lineWidth)
-
-                Path{ p in
-                    p.move(to: .zero)
-                    p.addLine(to: CGPoint(x: 50, y: 80))
-                }
-                .stroke(lineWidth: 2)
-                Pie(endAngle: .degrees( 240))
-                    .opacity(Constants.Pie.opacity)
-                    .overlay(
-                        Text(card.content)
-                            .font(.system(size: Constants.FontSize.largest))
-                            .minimumScaleFactor(Constants.FontSize.scaleFactory)
-                            .multilineTextAlignment(.center)
-                            .aspectRatio(1, contentMode: .fit)
-                            .padding(Constants.Pie.inset)
-                    )
-                    .padding(Constants.inset)
-            }
-            .opacity(card.isFaceUp ? 1 : 0)
-            base.fill().opacity(card.isFaceUp ? 0 : 1)
-        }
-        .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
+        Pie(endAngle: .degrees(240))
+            .opacity(Constants.Pie.opacity)
+            .overlay(
+                Text(card.content)
+                    .font(.system(size: Constants.FontSize.largest))
+                    .minimumScaleFactor(Constants.FontSize.scaleFactory)
+                    .multilineTextAlignment(.center)
+                    .aspectRatio(1, contentMode: .fit)
+                    .padding(Constants.Pie.inset)
+            )
+            .padding(Constants.inset)
+            .cardify(isFaceUp: card.isFaceUp)
+            .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
     }
 
     //在结构体内部定义一些常量，这样可以避免在多个地方使用相同的值时出现错误
@@ -56,7 +42,7 @@ struct CardView: View {
             static let smallest: CGFloat = 10
             static let scaleFactory: CGFloat = smallest / largest
         }
-        struct Pie{
+        struct Pie {
             static let opacity: CGFloat = 0.5
             static let inset: CGFloat = 5
         }

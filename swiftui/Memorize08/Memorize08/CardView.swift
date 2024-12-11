@@ -25,6 +25,17 @@ struct CardView: View {
                     .multilineTextAlignment(.center)
                     .aspectRatio(1, contentMode: .fit)
                     .padding(Constants.Pie.inset)
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                //这里是在使用隐式动画，特征是无论发生什么，你都希望这发生，完全独立于任何其他动画或其他正在发生的事情，并且会覆盖显示动画
+                //value 的含义是什么时候当什么条件时执行动画
+                //渐入渐出效果
+//                    .animation(.easeInOut(duration: 1).repeatForever(autoreverses: false),value: card.isMatched)
+                //线性效果
+//                    .animation(.linear(duration: 1).repeatForever(autoreverses: false),value: card.isMatched)
+                    .animation(
+                        .spin(duration: 1),
+                        value: card.isMatched
+                    )
             )
             .padding(Constants.inset)
             .cardify(isFaceUp: card.isFaceUp)
@@ -56,4 +67,11 @@ struct CardView: View {
     )
     .padding()
     .foregroundColor(.orange)
+}
+
+extension Animation{
+    //利用现有动画创建一个自己的动画
+    static func spin(duration: TimeInterval)-> Animation{
+        .linear(duration: duration).repeatForever(autoreverses: false)
+    }
 }

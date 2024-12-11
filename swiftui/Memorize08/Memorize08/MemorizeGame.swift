@@ -7,6 +7,7 @@
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
     private(set) var cards: [Card]
+    private(set) var score = 0
 
     init(
         numberofPairsOfCards: Int,
@@ -33,6 +34,14 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                     {
                         cards[choseIndex].isMatched = true
                         cards[potentialMatchIndex].isMatched = true
+                        score += 2
+                    }else{
+                        if cards[choseIndex].hasBeenSeen {
+                            score -= 1
+                        }
+                        if cards[potentialMatchIndex].hasBeenSeen {
+                            score -= 1
+                        }
                     }
                 } else {  //当前不存在已经朝上的卡片
                     indexOfTheOneAndOnlyFaceUpCard = choseIndex
@@ -49,8 +58,14 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     }
 
     struct Card: Equatable, Identifiable, CustomDebugStringConvertible {
-
-        var isFaceUp = true
+        var hasBeenSeen = false{
+            didSet{ //这里使用一下刚讲的属性观察器
+                if oldValue && !isFaceUp{
+                    hasBeenSeen = true
+                }
+            }
+        }
+        var isFaceUp = false
         var isMatched = false
         let content: CardContent
 

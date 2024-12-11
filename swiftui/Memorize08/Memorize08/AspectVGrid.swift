@@ -26,6 +26,8 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
                 ],
                 spacing: 0
             ) {
+                //当点击 shuffle 时，会重新排列卡片顺序， 这会导致 LazyV 网格重新定位其中的所有视图，
+                //当我单击shuffle 时，真正动画的只是 LazyVGrid 实现中 ViewModifier 位置的参数，我们看不到，但所有发生变化的 ViewModifier 仍然会受到影响，因为我们显式地对随用户意图而变化的所有内容进行动画处理。
                 ForEach(items) { item in
                     content(item)
                         .aspectRatio(aspectRatio, contentMode: .fit)

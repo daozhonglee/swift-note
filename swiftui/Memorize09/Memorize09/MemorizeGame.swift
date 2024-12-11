@@ -29,13 +29,15 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         if let choseIndex = cards.firstIndex(where: { $0.id == card.id }) {
             if !cards[choseIndex].isFaceUp && !cards[choseIndex].isMatched {
                 if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
+                    debugPrint(cards[choseIndex])
+                    debugPrint(cards[potentialMatchIndex])
                     if cards[choseIndex].content
                         == cards[potentialMatchIndex].content
                     {
                         cards[choseIndex].isMatched = true
                         cards[potentialMatchIndex].isMatched = true
                         score += 2
-                    }else{
+                    } else {
                         if cards[choseIndex].hasBeenSeen {
                             score -= 1
                         }
@@ -54,24 +56,23 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
 
     mutating func shuffle() {
         cards.shuffle()
-        debugPrint(cards)
     }
 
     struct Card: Equatable, Identifiable, CustomDebugStringConvertible {
-        var hasBeenSeen = false{
-            didSet{ //这里使用一下刚讲的属性观察器
-                if oldValue && !isFaceUp{
+        var isFaceUp = false {
+            didSet {
+                if oldValue && !isFaceUp {
                     hasBeenSeen = true
                 }
             }
         }
-        var isFaceUp = false
+        var hasBeenSeen = false
         var isMatched = false
         let content: CardContent
 
         var id: String
         var debugDescription: String {
-            "id: \(id), isFaceUp: \(isFaceUp), isMatched: \(isMatched), content: \(content) \n "
+            "id: \(id), isFaceUp: \(isFaceUp), isMatched: \(isMatched), content: \(content) \n , hasBeenSeen: \(hasBeenSeen)"
         }
     }
 }

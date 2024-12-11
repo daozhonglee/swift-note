@@ -49,11 +49,7 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
             let height = width / aspectRatio
 
             let rowCount = (count / columnCount).rounded(.up)
-            debugPrint(
-                "column: \(columnCount), count: \(count), rowCount: \(rowCount)"
-            )
             if rowCount * height < size.height {
-                debugPrint("bb: \(columnCount)")
                 return (size.width / columnCount).rounded(.down)
             }
             columnCount += 1

@@ -47,17 +47,32 @@ struct EmojiMomoryGameView: View {
             CardView(card)
                 .aspectRatio(aspectRatio, contentMode: .fit)
                 .padding(4)
+                .overlay(FlyingNumber(number: scoreChange(causedBy: card)))
+                .zIndex(scoreChange(causedBy: card) != 0 ? 100:0)
                 .onTapGesture {
-                    withAnimation(.interactiveSpring(duration: 1)) {
-                        viewModel.choose(card)
-                    }
+                    choose(card)
+
                 }
         }
         .foregroundColor(viewModel.color)
     }
 
+    private func choose(_ card: Card) {
+        withAnimation(.interactiveSpring(duration: 1)) {
+            let scoreBeforeChoosing = viewModel.score
+            viewModel.choose(card)
+            let scoreChange = viewModel.score - scoreBeforeChoosing
+            lastScoreChange = (scoreChange, causedByCardId: card.id)
+            debugPrint("scoreChange: \(scoreChange)")
+        }
+    }
+
+    @State private var lastScoreChange = (0, causedByCardId: "")
+
+    //要改变分数，我们必须跟踪我们拥有的最后一张牌的 ScoreChange 是什么，这意味着我们必须同时跟踪上次单击时发生的变化以及是哪张卡引起的。
     private func scoreChange(causedBy card: Card) -> Int{
-        return 0
+        let (scoreChange, causedByCardId) = lastScoreChange
+        return card.id == causedByCardId ? scoreChange : 0
     }
 }
 

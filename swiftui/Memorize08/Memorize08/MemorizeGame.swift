@@ -58,14 +58,14 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     }
 
     struct Card: Equatable, Identifiable, CustomDebugStringConvertible {
-        var hasBeenSeen = false{
-            didSet{ //这里使用一下刚讲的属性观察器
-                if oldValue && !isFaceUp{
+        var isFaceUp = false {
+            didSet {
+                if oldValue && !isFaceUp {
                     hasBeenSeen = true
                 }
             }
         }
-        var isFaceUp = false
+        var hasBeenSeen = false
         var isMatched = false
         let content: CardContent
 

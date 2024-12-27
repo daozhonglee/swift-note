@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "xcode-app",
+            "name": "Xcode-app configuration",
+            "buildTarget": {
+                "project": "Fleet SwiftUI Tutorial",
+                "target": "Fleet SwiftUI Tutorial",
+            },
+            "configuration": "Debug"
+        },
+
+    ]
+}

@@ -25,6 +25,7 @@ import SwiftUI
 
 struct Sheet: View {
     @State var showSheet: Bool = false
+    @State private var detentState: PresentationDetent = .medium
 
     var body: some View {
 
@@ -46,20 +47,24 @@ struct Sheet: View {
     }
     // 在 button 上使用.sheet
     func buttonSheet() -> some View {
-        Button("Show Sheet") {
-            showSheet = true
-        }
-        .frame(height: 100)
-        .padding()
-        .background(Color.green)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.red, lineWidth: 2)
-        )
-        .sheet(isPresented: $showSheet) {
-            Text("This is a sheet")
-                .frame(height: 300)
-        }
+        Button("button Sheet") {
+                    showSheet.toggle()
+                }
+                .sheet(isPresented: $showSheet) {
+                    VStack {
+                        Text("选择高度")
+                        Button("设置为大") {
+                            detentState = .large
+                        }
+                        Button("设置为中") {
+                            detentState = .medium
+                        }
+                        Button("设置为300px") {
+                            detentState = .height(300)
+                        }
+                    }
+                    .presentationDetents([.medium, .large, .height(300)], selection: $detentState)
+                }
     }
 
     // 在 stask 上使用.sheet
@@ -85,6 +90,51 @@ struct Sheet: View {
 
 }
 
+//设置.sheet 的高度
+struct ContentView2: View {
+    @State private var showSheet = false
+    @State private var selectedDetent: PresentationDetent = .medium
+
+    var body: some View {
+        Button("显示工作表") {
+            showSheet.toggle()
+        }
+        .sheet(isPresented: $showSheet) {
+            SheetView(selectedDetent: $selectedDetent)
+                .presentationDetents([.medium, .large, .height(300)], selection: $selectedDetent)
+        }
+    }
+}
+
+struct SheetView: View {
+    @Binding var selectedDetent: PresentationDetent
+
+    var body: some View {
+        VStack {
+            Text("当前高度: \(String(describing: selectedDetent))")
+                .padding()
+            
+            Button("设置为大") {
+                selectedDetent = .large
+            }
+            .padding()
+
+            Button("设置为中") {
+                selectedDetent = .medium
+            }
+            .padding()
+
+            Button("设置为300px") {
+                selectedDetent = .height(300)
+            }
+            .padding()
+            
+            Spacer()
+        }
+        .padding()
+    }
+}
+
 #Preview {
-    Sheet()
+    ContentView2()
 }
